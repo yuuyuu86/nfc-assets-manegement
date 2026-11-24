@@ -1,0 +1,10 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "equipment-manager",
+  "main": "worker/index.ts",
+  "compatibility_date": "2025-09-06",
+  "assets": {"not_found_handling":"single-page-application", "run_worker_first":["/api/*"]},
+  "vars": {"DEMO_MODE":"true"},
+  "d1_databases": [{"binding":"DB","database_name":"equipment-manager","database_id":"169c198e-1341-4b94-94d5-f002e0acf0af","migrations_dir":"migrations"}],
+  "triggers": {"crons":["*/5 * * * *"]}
+}
